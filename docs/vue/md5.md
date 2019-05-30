@@ -1,4 +1,5 @@
-#### 代码记忆之MD5加密文件
+# Note | MD5加密文件
+
 1. 将文件进行MD5加密，可以生成唯一对应的密钥
 ```javascript
   import SparkMD5 from 'spark-md5'

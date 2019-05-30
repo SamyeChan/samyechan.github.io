@@ -1,4 +1,4 @@
-##vue.draggable `拖拽插件`
+# Note | 拖拽插件
 
 ###Installation `安装`
 

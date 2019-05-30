@@ -5,12 +5,12 @@ module.exports = {
     // navbar: false, // 禁用导航栏
     nav: [
       { text: '首页', link: '/' },
-      { text: 'MENU有下拉', items: [ // 下拉选项
-        { text: 'HTML', link: '/html/' },
-        { text: 'CSS', link: '/CSS/' },
-        { text: 'JavaScript', link: '/JavaScript/' }
-      ]},
-      { text: 'MENU无下拉', link: '/vue/' },
+      { text: '快速跳转', items: [ // 下拉选项
+        // { text: 'HTML', link: '/html/' },
+        // { text: 'CSS', link: '/CSS/' },
+        // { text: 'JavaScript', link: '/JavaScript/' },
+        { text: 'Vue', link: '/vue/learn-basic.md' }
+      ]}
     ],
     /* 侧边栏 */
     // sidebar: 'auto'
@@ -32,11 +32,27 @@ module.exports = {
         ]
       },
       {
+        title: '小程序',
+        collapsable: false,
+        children: [
+          // 基础部分
+          '/weapp/learn-weapp-basic.md',
+          '/weapp/learn-weapp-cloud.md',
+          // 例子部分
+          '/weapp/demo-imooc-movie.md'
+        ]
+      },
+      {
         title: 'Vue',
         collapsable: false,
         children: [
+          // 基础部分
+          '/vue/learn-basic.md',
+          // 项目
+          '/vue/proj-business-report.md',
+          '/vue/proj-realtime-video.md',
           // 李西康分享
-          '/vue/$set$delete.md',
+          '/vue/set_delete.md',
           '/vue/compress.md',
           '/vue/draggable.md',
           '/vue/md5.md'
