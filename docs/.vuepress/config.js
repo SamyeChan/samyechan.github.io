@@ -19,7 +19,8 @@ module.exports = {
         title: '起始',
         collapsable: true,
         children: [
-          '/start/'
+          '/start/',
+          '/start/list.md'
         ]
       },
       {
@@ -28,14 +29,15 @@ module.exports = {
         children: [
           // 基础部分
           '/vue/learn-basic.md',
+          '/vue/learn-lifecycle.md',
           // 项目
           '/vue/proj-business-report.md',
           '/vue/proj-realtime-video.md',
           // 李西康分享
-          '/vue/set_delete.md',
-          '/vue/compress.md',
-          '/vue/draggable.md',
-          '/vue/md5.md',
+          '/vue/note-set_delete.md',
+          '/vue/note-compress.md',
+          '/vue/note-draggable.md',
+          '/vue/note-md5.md',
           // 练习
           '/vue/demo-where-to-go.md'
         ]
@@ -46,6 +48,8 @@ module.exports = {
         children: [
           // 基础部分
           '/weapp/learn-weapp-basic.md',
+          '/weapp/learn-weapp-component.md',
+          '/weapp/learn-weapp-api.md',
           '/weapp/learn-weapp-cloud.md',
           // 例子部分
           '/weapp/demo-imooc-movie.md'
@@ -79,7 +83,8 @@ module.exports = {
         title: 'JavaScript',
         collapsable: true,
         children: [
-          '/js/'
+          '/js/',
+          '/js/note-about-this.md'
         ]
       }
     ]
