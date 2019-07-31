@@ -31,7 +31,11 @@ csy <span class="token operator">--</span><span class="token operator">--</span>
 <span class="token class-name">FE</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">hello</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Hello, '</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'!'</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
+<<<<<<< HEAD
 </code></pre></div><h2 id="原型继承"><a href="#原型继承" aria-hidden="true" class="header-anchor">#</a> 原型继承 <span class="badge error top" data-v-31d10f5a>X</span></h2> <ul><li>继承实际上是类型的扩展；</li> <li>JavaScript 由于采用原型继承，故无法直接扩展一个 Class；</li> <li>JavaScript 的对象模型是基于原型实现的；</li></ul> <h4 id="javascript的原型继承实现方式"><a href="#javascript的原型继承实现方式" aria-hidden="true" class="header-anchor">#</a> JavaScript的原型继承实现方式</h4> <ol><li>定义新的构造函数，并在内部用 <code>call()</code>调用希望“继承”的构造函数，并绑定this；</li> <li>借助中间函数 <code>F</code> 实现原型链继承，最好通过封装的 <code>inherits</code> 函数完成；</li> <li>继续在新的构造函数的原型上定义新方法；</li></ol> <h2 id="class-继承"><a href="#class-继承" aria-hidden="true" class="header-anchor">#</a> class 继承</h2> <ul><li>ES6 引入新关键字： <code>class</code>；</li> <li>使得定义类更加简单；</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> 类名 <span class="token punctuation">{</span>
+=======
+</code></pre></div><h2 id="原型继承"><a href="#原型继承" aria-hidden="true" class="header-anchor">#</a> 原型继承 <span class="badge error" style="vertical-align:top;" data-v-5ebae2b8>X</span></h2> <ul><li>继承实际上是类型的扩展；</li> <li>JavaScript 由于采用原型继承，故无法直接扩展一个 Class；</li> <li>JavaScript 的对象模型是基于原型实现的；</li></ul> <h4 id="javascript的原型继承实现方式"><a href="#javascript的原型继承实现方式" aria-hidden="true" class="header-anchor">#</a> JavaScript的原型继承实现方式</h4> <ol><li>定义新的构造函数，并在内部用 <code>call()</code>调用希望“继承”的构造函数，并绑定this；</li> <li>借助中间函数 <code>F</code> 实现原型链继承，最好通过封装的 <code>inherits</code> 函数完成；</li> <li>继续在新的构造函数的原型上定义新方法；</li></ol> <h2 id="class-继承"><a href="#class-继承" aria-hidden="true" class="header-anchor">#</a> class 继承</h2> <ul><li>ES6 引入新关键字： <code>class</code>；</li> <li>使得定义类更加简单；</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> 类名 <span class="token punctuation">{</span>
+>>>>>>> c035458ba6fa896ef3fbb40e76860bc7ad11de1b
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">=</span> x<span class="token punctuation">;</span>
     <span class="token operator">...</span>
@@ -53,7 +57,11 @@ csy <span class="token operator">--</span><span class="token operator">--</span>
     <span class="token operator">...</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
+<<<<<<< HEAD
 </code></pre></div><ul><li><code>extends</code> 表示子类原型链对象来自于父类；</li> <li>子类的构造函数需要通过 <code>super([父类参数])</code> 来调用父类的构造函数，否则父类的属性无法正常初始化；</li> <li><a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">Babel<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> - 一个工具把 <code>class</code> 代码转换为传统的 <code>prototype</code> 代码；</li></ul> <h5 id="es6-引入的-class-和原有的-javascript-原型继承没啥本质区别，就是更好写更好懂了嘛"><a href="#es6-引入的-class-和原有的-javascript-原型继承没啥本质区别，就是更好写更好懂了嘛" aria-hidden="true" class="header-anchor">#</a> ES6 引入的 <code>class</code> 和原有的 JavaScript 原型继承没啥本质区别，就是更好写更好懂了嘛</h5></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+=======
+</code></pre></div><ul><li><code>extends</code> 表示子类原型链对象来自于父类；</li> <li>子类的构造函数需要通过 <code>super([父类参数])</code> 来调用父类的构造函数，否则父类的属性无法正常初始化；</li> <li><a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">Babel<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> - 一个工具把 <code>class</code> 代码转换为传统的 <code>prototype</code> 代码；</li></ul> <h5 id="es6-引入的-class-和原有的-javascript-原型继承没啥本质区别，就是更好写更好懂了嘛"><a href="#es6-引入的-class-和原有的-javascript-原型继承没啥本质区别，就是更好写更好懂了嘛" aria-hidden="true" class="header-anchor">#</a> ES6 引入的 <code>class</code> 和原有的 JavaScript 原型继承没啥本质区别，就是更好写更好懂了嘛</h5></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+>>>>>>> c035458ba6fa896ef3fbb40e76860bc7ad11de1b
         ←
         <a href="/js/js/js-function.html" class="prev">
           Learn | 函数
@@ -61,7 +69,12 @@ csy <span class="token operator">--</span><span class="token operator">--</span>
           Note | 判断this指向
         </a>
         →
+<<<<<<< HEAD
       </span></p></div> </div> <!----></div></div>
     <script src="/assets/js/app.eeafed04.js" defer></script><script src="/assets/js/36.fac903a8.js" defer></script><script src="/assets/js/8.3b103cff.js" defer></script>
+=======
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.62e563ec.js" defer></script><script src="/assets/js/2.79583bb8.js" defer></script><script src="/assets/js/36.2fc774a3.js" defer></script><script src="/assets/js/9.bdf49ab2.js" defer></script>
+>>>>>>> c035458ba6fa896ef3fbb40e76860bc7ad11de1b
   </body>
 </html>
